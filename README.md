@@ -45,6 +45,7 @@ Los generadores se definen utilizando funciones que contienen la palabra clave y
 Cuando vuelves a llamar a la función generadora, se reanuda desde donde se quedó, lo que permite la generación incremental de valores.
 
 Algunas de sus ventajas sobre las listas son:
+
 Ahorran memoria ya que los valores se generan uno a la vez cuando son necesarios, en lugar de calcular y almacenar todos los valores de antemano como en una lista.
 Los generadores no almacenan todos los valores en la memoria al mismo tiempo. En cambio, solo mantienen un registro del estado actual y la lógica para generar el siguiente valor. Esto es beneficioso cuando trabajas con conjuntos de datos muy grandes que no cabrían en la memoria RAM.
 Los generadores pueden utilizarse para representar secuencias infinitas de datos, como secuencias numéricas infinitas o flujos de datos en tiempo real. Esto sería imposible con una lista, ya que requeriría una cantidad infinita de memoria.
@@ -106,7 +107,7 @@ La declaración with se utiliza para crear un contexto en Python. La sintaxis b�
 ``` python
 with contexto:
     # Código que se ejecutará en el contexto
-
+´´´
 
 ### 7
 
@@ -151,14 +152,16 @@ Con las listas por comprensión, puedes generar una nueva lista aplicando una ex
 
 ´´´ python
 nueva_lista = [expresión for elemento in secuencia]
+´´´
 
 "expresión" es la expresión que se evalúa y se agrega a la nueva lista para cada elemento en la secuencia.
 "elemento" es la variable que representa cada elemento de la secuencia.
 "secuencia" es la secuencia de la cual deseas generar la nueva lista.
 También puedes agregar una cláusula condicional a la lista por comprensión para filtrar los elementos que se incluyen en la nueva lista. La forma general es:
+
 ´´´python
 nueva_lista = [expresión for elemento in secuencia if condición]
-
+´´´
 
 ### 10
 
@@ -319,7 +322,7 @@ def mi_corrutina():
     while True:
         valor = yield
         print(f"Recibido: {valor}")
-
+´´´
 
 
 ### 19
