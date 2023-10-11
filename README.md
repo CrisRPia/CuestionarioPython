@@ -17,19 +17,23 @@ De la forma: a = 1 o a : int = 1
 > ¿Cómo se crea una lista en Python y cómo se accede a sus elementos?
 
 lista = [0, 1, 2] --> para crear
+
 lista[1] = 1 --> para acceder 
 
 ### 4
 > ¿Cómo se define una función en Python?
 
 def Función ():
+
     cuerpo
 
 ### 5
 > ¿Qué es un bulce for en Python y cómo se utiliza?
 
 Es un bucle que ejecuta su cuerpo por cada elemento de un iterador.
+
 for elemento in elementos:
+
     print (elemento)
 
 ### 6
@@ -41,36 +45,50 @@ Se evalúa una condición y si esta se cumple se ejecuta el cuerpo del if.
 > ¿Qué es un diccionario en Python y cómo se utiliza?
 
 Es un conjunto de claves y sus valores.
+
 a = {clave : valor}
+
 a[clave] = valor
 
 ### 8
 > ¿Cómo se manejan las excepciones en Python con try y except?
 
 try:
+
     "código con error"
+
 catch
+
     manejar error
 
 ### 9
 > ¿Qué son los módulos en Python y cómo se importan?
 
 Son código externo que se puede llamar.
+
 Import Math
 
 ### 10
 > ¿Cómo se lee y escribe en archivos usando Python?
 
+
+
 Para leer:
+``` python
+
 with open('archivo.txt', 'r') as archivo:
     contenido = archivo.read()
     print(contenido)
+``` 
 
 Para escribir:
+``` python
+
 with open('nuevo_archivo.txt', 'w') as archivo:
     archivo.write('Este es un nuevo archivo.\n')
     archivo.write('Aquí puedes escribir más contenido.')
 
+``` 
 
 
 ## Preguntas avanzadas
