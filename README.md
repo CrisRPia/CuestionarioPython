@@ -107,7 +107,7 @@ La declaración with se utiliza para crear un contexto en Python. La sintaxis b�
 ``` python
 with contexto:
     # Código que se ejecutará en el contexto
-´´´
+```
 
 ### 7
 
@@ -150,18 +150,18 @@ output:
 
 Con las listas por comprensión, puedes generar una nueva lista aplicando una expresión a cada elemento de una secuencia (como una lista, tupla o rango) o iterando sobre una secuencia mientras aplicas una expresión condicional. La sintaxis básica de una lista por comprensión es la siguiente:
 
-´´´ python
+``` python
 nueva_lista = [expresión for elemento in secuencia]
-´´´
+```
 
 "expresión" es la expresión que se evalúa y se agrega a la nueva lista para cada elemento en la secuencia.
 "elemento" es la variable que representa cada elemento de la secuencia.
 "secuencia" es la secuencia de la cual deseas generar la nueva lista.
 También puedes agregar una cláusula condicional a la lista por comprensión para filtrar los elementos que se incluyen en la nueva lista. La forma general es:
 
-´´´python
+``` python
 nueva_lista = [expresión for elemento in secuencia if condición]
-´´´
+```
 
 ### 10
 
@@ -233,6 +233,7 @@ print(b)  # Dunder
 > ¿Como se puede utilizar la programación funcional en Python?
 
 Utilizando, por ejemplo, funciones lamda o como ciudadanos de primera clase.
+
 Funciones como ciudadanos de primera clase: En Python, las funciones son ciudadanos de primera clase, lo que significa que puedes asignarlas a variables, pasarlas como argumentos a otras funciones y devolverlas como valores. Esto permite el uso de funciones de orden superior, que son funciones que operan sobre otras funciones.
 
 Funciones lambda: Las funciones lambda son funciones anónimas y pequeñas que se pueden utilizar para definir funciones de manera concisa. Son útiles cuando necesitas una función simple para una operación específica.
@@ -317,12 +318,12 @@ with multiprocessing.Pool() as pool:
 Las corrutinas permiten la ejecución asincrónica y cooperativa, lo que significa que un programa puede pausar y reanudar la ejecución en puntos específicos sin la necesidad de hilos o procesos múltiples.
 Para utilizar yield, hay que definir una función utilizando la palabra yield. El yield se utiliza para pausar la ejecución en ese punto y devolver un valor al llamador. Cuando se llama a la función, esta no se ejecuta por completo, sino que devuelve un objeto generador que puede ser utilizado para controlar la ejecución de la función.
 
-´´´python
+``` python
 def mi_corrutina():
     while True:
         valor = yield
         print(f"Recibido: {valor}")
-´´´
+```
 
 
 ### 19
