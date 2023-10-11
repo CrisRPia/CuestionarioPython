@@ -106,7 +106,7 @@ La declaración with se utiliza para crear un contexto en Python. La sintaxis b�
 
 ``` python
 with contexto:
-    # Código que se ejecutará en el contexto
+     Código que se ejecutará en el contexto
 ```
 
 ### 7
