@@ -37,6 +37,18 @@ fuente](https://www.geeksforgeeks.org/multiple-inheritance-in-python/)
 
 ### 3
 
+> ¿Qué es un generador en Python y cual es su ventaja sobre una lista normal?
+
+
+Es una función que permite generar valores sobre la marcha en lugar de crear una lista completa de valores y almacenarlos en la memoria.
+Los generadores se definen utilizando funciones que contienen la palabra clave yield. Cuando la función alcanza una declaración yield, el valor se devuelve y el estado de la función se guarda.
+Cuando vuelves a llamar a la función generadora, se reanuda desde donde se quedó, lo que permite la generación incremental de valores.
+
+Algunas de sus ventajas sobre las listas son:
+Ahorran memoria ya que los valores se generan uno a la vez cuando son necesarios, en lugar de calcular y almacenar todos los valores de antemano como en una lista.
+Los generadores no almacenan todos los valores en la memoria al mismo tiempo. En cambio, solo mantienen un registro del estado actual y la lógica para generar el siguiente valor. Esto es beneficioso cuando trabajas con conjuntos de datos muy grandes que no cabrían en la memoria RAM.
+Los generadores pueden utilizarse para representar secuencias infinitas de datos, como secuencias numéricas infinitas o flujos de datos en tiempo real. Esto sería imposible con una lista, ya que requeriría una cantidad infinita de memoria.
+
 ### 4
 
 ### 5
@@ -86,6 +98,16 @@ b = a._attribute
 
 ### 6
 
+> ¿Qué es un contexto en Python y como se utiliza la declaración with?
+
+Un contexto se refiere a un bloque de código en el que se definen acciones específicas que se deben realizar antes y después de que ese bloque se ejecute.
+La declaración with se utiliza para crear un contexto en Python. La sintaxis básica de la declaración with es la siguiente:
+
+``` python
+with contexto:
+    # Código que se ejecutará en el contexto
+
+
 ### 7
 
 ### 8
@@ -123,6 +145,21 @@ output:
 
 ### 9
 
+> ¿Qué son las listas por comprensión (list comprehensions) y como se utilizan en Python?
+
+Con las listas por comprensión, puedes generar una nueva lista aplicando una expresión a cada elemento de una secuencia (como una lista, tupla o rango) o iterando sobre una secuencia mientras aplicas una expresión condicional. La sintaxis básica de una lista por comprensión es la siguiente:
+
+´´´ python
+nueva_lista = [expresión for elemento in secuencia]
+
+"expresión" es la expresión que se evalúa y se agrega a la nueva lista para cada elemento en la secuencia.
+"elemento" es la variable que representa cada elemento de la secuencia.
+"secuencia" es la secuencia de la cual deseas generar la nueva lista.
+También puedes agregar una cláusula condicional a la lista por comprensión para filtrar los elementos que se incluyen en la nueva lista. La forma general es:
+´´´python
+nueva_lista = [expresión for elemento in secuencia if condición]
+
+
 ### 10
 
 ### 11
@@ -150,6 +187,12 @@ tenga una vida más larga.
 Por último, se pueden forzar recolecciones mediante el módulo gc.
 
 ### 12
+
+> ¿Qué es __init__.py y cual es su uso en los paquetes de Python?
+
+__init__.py es un archivo especial utilizado para indicar que un directorio debe tratarse como un paquete Python. 
+El archivo __init__.py puede estar presente en un directorio (paquete) y puede estar vacío o contener código Python.
+Su principal propósito es establecer que el directorio en el que se encuentra es un paquete válido que puede ser importado como un módulo en un programa Python. 
 
 ### 13
 
@@ -183,6 +226,13 @@ print(b)  # Dunder
 ```
 
 ### 15
+
+> ¿Como se puede utilizar la programación funcional en Python?
+
+Utilizando, por ejemplo, funciones lamda o como ciudadanos de primera clase.
+Funciones como ciudadanos de primera clase: En Python, las funciones son ciudadanos de primera clase, lo que significa que puedes asignarlas a variables, pasarlas como argumentos a otras funciones y devolverlas como valores. Esto permite el uso de funciones de orden superior, que son funciones que operan sobre otras funciones.
+
+Funciones lambda: Las funciones lambda son funciones anónimas y pequeñas que se pueden utilizar para definir funciones de manera concisa. Son útiles cuando necesitas una función simple para una operación específica.
 
 ### 16
 
@@ -258,5 +308,18 @@ with multiprocessing.Pool() as pool:
 ```
 
 ### 18
+
+> ¿Como se pueden utilizar las corrutinas con la palabra clave yield para manejar la concurrencia de una manera diferente a los hilos y procesos tradicionales?
+
+Las corrutinas permiten la ejecución asincrónica y cooperativa, lo que significa que un programa puede pausar y reanudar la ejecución en puntos específicos sin la necesidad de hilos o procesos múltiples.
+Para utilizar yield, hay que definir una función utilizando la palabra yield. El yield se utiliza para pausar la ejecución en ese punto y devolver un valor al llamador. Cuando se llama a la función, esta no se ejecuta por completo, sino que devuelve un objeto generador que puede ser utilizado para controlar la ejecución de la función.
+
+´´´python
+def mi_corrutina():
+    while True:
+        valor = yield
+        print(f"Recibido: {valor}")
+
+
 
 ### 19
