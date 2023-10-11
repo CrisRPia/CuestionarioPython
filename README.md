@@ -80,11 +80,15 @@ with open('nuevo_archivo.txt', 'w') as archivo:
 > ¿Qué es un decorador en Python y cómo se utiliza?
 
 Es una función que permite modificar el comportamiento de otra función o método.
+``` python
+
 @mi_decorador
 def saludar():
     print("Hola, mundo!")
 
 saludar()
+``` 
+
 
 ### 2
 
@@ -199,6 +203,7 @@ with contexto:
 > ¿Cómo se utiliza *args y **kwargs en Python?
 
 El *args permite pasar un número variable de argumentos posicionales a una función. Los argumentos se pasan como una secuencia de valores y se recogen en una tupla en la función.
+``` python
 
 def suma(*args):
     resultado = 0
@@ -208,14 +213,17 @@ def suma(*args):
 
 resultado = suma(1, 2, 3, 4, 5)
 print(resultado)  
+``` 
 
 El **kwargs permite pasar un número variable de argumentos de palabra clave a una función. Los argumentos se pasan como pares de clave-valor y se recogen en un diccionario en la función.
+``` python
 
 def informacion(**kwargs):
     for clave, valor in kwargs.items():
         print(f'{clave}: {valor}')
 
 informacion(nombre='Juan', edad=30, ciudad='Ejemplo')
+``` 
 
 
 
@@ -279,6 +287,7 @@ nueva_lista = [expresión for elemento in secuencia if condición]
 
 El patrón de diseño Singleton se utiliza para garantizar que una clase tenga una única instancia y proporcionar un punto de acceso global a esa instancia.
 En Python, se puede implementar un Singleton utilizando un módulo. Debido a que los módulos en Python se importan solo una vez, la instancia de la clase dentro del módulo se comparte en toda la aplicación. 
+``` python
 
 class Singleton:
     def __init__(self):
@@ -286,6 +295,7 @@ class Singleton:
 
 // La instancia única de la clase Singleton se crea cuando se importa el módulo
 singleton_instance = Singleton()
+``` 
 
 También se puede implementar un Singleton como un decorador que garantice que solo se cree una instancia de la clase y que todas las llamadas a la clase devuelvan la misma instancia. 
 
@@ -327,6 +337,7 @@ Su principal propósito es establecer que el directorio en el que se encuentra e
 > ¿Cómo se puede utilizar la reflexión (reflection) en Python para inspeccionar o modificar el código en tiempo de ejecución?
 
 La función dir(): Puedes utilizar la función dir(objeto) para obtener una lista de los atributos y métodos disponibles en un objeto. Esto es útil para inspeccionar un objeto y entender su estructura.
+``` python
 
 python
 Copy code
@@ -337,7 +348,11 @@ class MiClase:
 objeto = MiClase()
 atributos = dir(objeto)
 print(atributos)  # Imprime una lista de atributos y métodos de 'objeto'
+``` 
+
 La función vars(): La función vars(objeto) devuelve un diccionario con los atributos y valores del objeto. Esto es especialmente útil para inspeccionar y modificar los atributos de un objeto.
+
+``` python
 
 python
 Copy code
@@ -349,7 +364,11 @@ class Persona:
 persona = Persona("Juan", 30)
 atributos = vars(persona)
 print(atributos)  # Imprime {'nombre': 'Juan', 'edad': 30}
+``` 
+
 El módulo inspect: El módulo inspect proporciona funciones para obtener información sobre objetos, como funciones, clases y módulos. Puedes utilizarlo para inspeccionar funciones, obtener información sobre sus argumentos y más.
+
+``` python
 
 python
 Copy code
@@ -361,7 +380,10 @@ def mi_funcion(a, b=0):
 firma = inspect.signature(mi_funcion)
 parametros = firma.parameters
 print(parametros)  # Imprime OrderedDict([('a', <Parameter "a">), ('b', <Parameter "b=0">)])
+``` 
+
 Clases y objetos dinámicos: Puedes crear clases y objetos en tiempo de ejecución utilizando la función type() para crear clases dinámicamente o utilizando la función setattr() para agregar atributos a objetos.
+``` python
 
 python
 Copy code
@@ -371,7 +393,11 @@ MiClaseDinamica = type('MiClaseDinamica', (object,), {'atributo': 42})
 // Agregar atributos a un objeto en tiempo de ejecución
 objeto = MiClase()
 setattr(objeto, 'nuevo_atributo', 'Hola, mundo!')
+``` 
+
 Importación dinámica de módulos: Puedes importar módulos en tiempo de ejecución utilizando la función importlib.import_module.
+
+``` python
 
 python
 Copy code
@@ -379,6 +405,8 @@ import importlib
 
 modulo = importlib.import_module('mimodulo')
 resultado = modulo.mi_funcion()
+``` 
+
 
 ### 14
 
@@ -423,6 +451,8 @@ Funciones lambda: Las funciones lambda son funciones anónimas y pequeñas que s
 
 > ¿Cómo se puede utilizar los decoradores para registrar (logging) automáticamente las llamadas a funciones en Python?
 
+``` python
+
 import logging
 
 // Configura el sistema de registro
@@ -452,6 +482,7 @@ resultado_resta = resta(10, 2)
 // Ver el registro
 // El registro se guardará en un archivo llamado "registro.log"
 // y contendrá información sobre las llamadas a las funciones
+``` 
 
 
 ### 17
@@ -544,6 +575,8 @@ def mi_corrutina():
 
 > ¿Cómo se puede utilizar la biblioteca asyncio para programación asincrónica en Python?
 
+``` python
+
 import asyncio
 
 // Define funciones asincrónicas
@@ -574,3 +607,4 @@ loop.run_until_complete(main())
 // Cierra el ciclo de eventos
 loop.close()
 
+``` 
